@@ -15,14 +15,14 @@ export default function FormAddTask({ onAddTask }) {
 
         onAddTask(taskObj);
 
-        setTask('');
         setTime('');
+        setTask('');
     }
 
     return (
         <form action="" onSubmit={handleSubmit}>
             <label htmlFor="task-input"></label>
-            <input type="text" onChange={e => setTask(e.target.value)} id="task-input" placeholder="your task" />
+            <input type="text" value={task} onChange={e => setTask(e.target.value)} id="task-input" placeholder="your task" />
 
             <label htmlFor="task-time"></label>
             <input type="time" value={time} id="task-time" onChange={e => setTime(e.target.value)} />
